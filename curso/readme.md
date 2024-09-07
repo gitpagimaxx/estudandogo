@@ -22,11 +22,21 @@ Existe o `uint` que recebe números inteiros apenas positivos
 
 ---
 
-## Números reais
+### Números reais - float32 e float64
 
-### Float32 e Float64
-
-`float32` `float64`, deve usar o `.` para os valores reais 
+`float32` `float64`, deve usar o `.` para os valores reais, importante saber que não é possível usar o `float` apenas, irá ocorrer erro de compilação então deve ser inferida com 32 ou 64 dependendo da quantidade a ser populada na variável.
 
 `var numeroReal float32 = 123.45`
+
+`var numeroReal float54 = 1230000.45`
+
+`numeroReal := 123.45`
+
+---
+
+### String
+
+Usa-se aspas duplas e aspas simples são para valor char igual ao C#
+
+Quando usar o `char` ao inferir um valor ele vai substituir pelo ASC equivalente tipo B == 66
 

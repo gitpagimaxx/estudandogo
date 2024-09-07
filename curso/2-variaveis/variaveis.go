@@ -22,4 +22,6 @@ func main() {
 	const constante1 string = "Constante 1"
 	fmt.Println(constante1)
 
+	char := 'B'
+	fmt.Println(char)
 }
