@@ -40,3 +40,19 @@ Usa-se aspas duplas e aspas simples são para valor char igual ao C#
 
 Quando usar o `char` ao inferir um valor ele vai substituir pelo ASC equivalente tipo B == 66
 
+## Funções
+
+`func calculosMatematicos(numero1 int8, numero2 int8) (int8, int8) {
+	soma := numero1 + numero2
+	subtracao := numero1 - numero2
+	return soma, subtracao
+}`
+
+Uma função pode retornar mais de um resultado, bastando tipar o retorna como na função acima
+
+E para ignorar um dos resultado você precisa usar o `_` para isso
+
+E para usar basta chamar como no exemplo abaixo:
+
+`resultado_1, resultado_2 := calculosMatematicos(param1, param2)`
+
