@@ -56,3 +56,9 @@ E para usar basta chamar como no exemplo abaixo:
 
 `resultado_1, resultado_2 := calculosMatematicos(param1, param2)`
 
+## Operadores
+
+Só existe && OR (com pipe) e ! (negar) nem diferente existe
+
+Não existe ternario, tem que usar o if
+
