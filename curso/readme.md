@@ -62,3 +62,5 @@ Só existe && OR (com pipe) e ! (negar) nem diferente existe
 
 Não existe ternario, tem que usar o if
 
+## Struct
+
