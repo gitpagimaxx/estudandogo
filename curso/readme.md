@@ -64,3 +64,11 @@ Não existe ternario, tem que usar o if
 
 ## Struct
 
+## Herança
+
+Não existe herança por assim dizer, é algo que se aproxima de uma linguagem orientada a objetos
+
+Para não ter que acessar algo como estudante.pessoa.nome ao criar a struct com herança você só adiciona o nome da struct de herança assim você irá acessar a informação com estudante.nome
+
+A struct pode ser criada e não tem problema como varáveis que se criadas devem ser usadas as structs não são assim.
+
