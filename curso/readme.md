@@ -72,3 +72,6 @@ Para não ter que acessar algo como estudante.pessoa.nome ao criar a struct com 
 
 A struct pode ser criada e não tem problema como varáveis que se criadas devem ser usadas as structs não são assim.
 
+## Ponteiros
+
+Ponteiros são refências de memória, 
