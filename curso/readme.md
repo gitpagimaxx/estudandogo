@@ -75,3 +75,7 @@ A struct pode ser criada e não tem problema como varáveis que se criadas devem
 ## Ponteiros
 
 Ponteiros são refências de memória, 
+
+## Array e Slices
+
+O slice é sempre criado a partir de um array
