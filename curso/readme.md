@@ -79,3 +79,8 @@ Ponteiros são refências de memória,
 ## Array e Slices
 
 O slice é sempre criado a partir de um array
+
+## Structs
+
+O GO não tem classe o mais chega perto são as structs
+
