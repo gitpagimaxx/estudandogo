@@ -22,11 +22,60 @@ Existe o `uint` que recebe números inteiros apenas positivos
 
 ---
 
-## Números reais
+### Números reais - float32 e float64
 
-### Float32 e Float64
-
-`float32` `float64`, deve usar o `.` para os valores reais 
+`float32` `float64`, deve usar o `.` para os valores reais, importante saber que não é possível usar o `float` apenas, irá ocorrer erro de compilação então deve ser inferida com 32 ou 64 dependendo da quantidade a ser populada na variável.
 
 `var numeroReal float32 = 123.45`
 
+`var numeroReal float54 = 1230000.45`
+
+`numeroReal := 123.45`
+
+---
+
+### String
+
+Usa-se aspas duplas e aspas simples são para valor char igual ao C#
+
+Quando usar o `char` ao inferir um valor ele vai substituir pelo ASC equivalente tipo B == 66
+
+## Funções
+
+`func calculosMatematicos(numero1 int8, numero2 int8) (int8, int8) {
+	soma := numero1 + numero2
+	subtracao := numero1 - numero2
+	return soma, subtracao
+}`
+
+Uma função pode retornar mais de um resultado, bastando tipar o retorna como na função acima
+
+E para ignorar um dos resultado você precisa usar o `_` para isso
+
+E para usar basta chamar como no exemplo abaixo:
+
+`resultado_1, resultado_2 := calculosMatematicos(param1, param2)`
+
+## Operadores
+
+Só existe && OR (com pipe) e ! (negar) nem diferente existe
+
+Não existe ternario, tem que usar o if
+
+## Struct
+
+## Herança
+
+Não existe herança por assim dizer, é algo que se aproxima de uma linguagem orientada a objetos
+
+Para não ter que acessar algo como estudante.pessoa.nome ao criar a struct com herança você só adiciona o nome da struct de herança assim você irá acessar a informação com estudante.nome
+
+A struct pode ser criada e não tem problema como varáveis que se criadas devem ser usadas as structs não são assim.
+
+## Ponteiros
+
+Ponteiros são refências de memória, 
+
+## Array e Slices
+
+O slice é sempre criado a partir de um array
