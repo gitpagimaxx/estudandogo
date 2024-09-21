@@ -37,4 +37,13 @@ func main() {
 	slice1 = append(slice1, 6)
 	fmt.Println(slice1)
 
+	// arrays internos
+	fmt.Println("-----------------")
+	slice2 := make([]int, 10, 20)
+	fmt.Println(slice2)
+
+	fmt.Println("-----------------")
+	fmt.Println(len(slice2)) // tamanho do slice
+	fmt.Println(cap(slice2)) // capacidade do slice
+
 }

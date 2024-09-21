@@ -79,3 +79,34 @@ Ponteiros são refências de memória,
 ## Array e Slices
 
 O slice é sempre criado a partir de um array
+
+## Structs
+
+O GO não tem classe o mais chega perto são as structs
+
+## Defer
+
+Uma coisa interessante em funcções `defer` é que ela executa logo antes de qualquer return de uma função ou seja, como executar algo depois do processamento sem a necessidade de um if por exemplo para dar a resposta. No caso pode ser executada uma função ou um simple fmt.Println, é usado para fechar a conexão com o banco de dados.
+
+## Panic e Recover
+
+O Panic para a execução do programa, e para continuar a vida do programa usa-se o recovery com um if de criação.
+
+`
+if r := recover(); r != nil {
+	fmt.Println("Execução recuperada com sucesso!")
+}
+`
+
+## Closure
+
+É uma função que tem uma lembrança de onde ela veio, e irá usar tudo o que tem dentro da função de chamada e não de onde ela foi chamada.
+
+## Funções com ponteiros
+
+E comumente usado quando você precisa fazer uma alteração "global" de uma variável, pois ela vai mudar o valor daquela variável em memória e não uma cópia dela.
+
+## Função init
+
+É uma função que é executada antes da função main, sempre que rodar o sistema a função init, se existir é chamada antes.
+
