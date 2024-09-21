@@ -110,3 +110,5 @@ E comumente usado quando você precisa fazer uma alteração "global" de uma var
 
 É uma função que é executada antes da função main, sempre que rodar o sistema a função init, se existir é chamada antes.
 
+## Métodos
+
