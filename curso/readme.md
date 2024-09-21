@@ -102,3 +102,11 @@ if r := recover(); r != nil {
 
 É uma função que tem uma lembrança de onde ela veio, e irá usar tudo o que tem dentro da função de chamada e não de onde ela foi chamada.
 
+## Funções com ponteiros
+
+E comumente usado quando você precisa fazer uma alteração "global" de uma variável, pois ela vai mudar o valor daquela variável em memória e não uma cópia dela.
+
+## Função init
+
+É uma função que é executada antes da função main, sempre que rodar o sistema a função init, se existir é chamada antes.
+
