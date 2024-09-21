@@ -84,3 +84,7 @@ O slice é sempre criado a partir de um array
 
 O GO não tem classe o mais chega perto são as structs
 
+## Defer
+
+Uma coisa interessante em funcções `defer` é que ela executa logo antes de qualquer return de uma função ou seja, como executar algo depois do processamento sem a necessidade de um if por exemplo para dar a resposta. No caso pode ser executada uma função ou um simple fmt.Println.
+
