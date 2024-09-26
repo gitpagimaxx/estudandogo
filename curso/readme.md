@@ -112,3 +112,6 @@ E comumente usado quando você precisa fazer uma alteração "global" de uma var
 
 ## Métodos
 
+## Interface 
+
+É o mesmo modo que usamos em C# mas de um jeito diferente
