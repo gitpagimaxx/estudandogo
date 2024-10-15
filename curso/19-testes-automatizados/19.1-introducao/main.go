@@ -6,9 +6,9 @@ import (
 )
 
 func main() {
-	fmt.Println("Testes Automatizados Intrudução")
+	fmt.Println("Testes Automatizados Introdução")
 
-	tipoEndereco := enderecos.TipoDeEndereco("rua ABC")
+	tipoEndereco := enderecos.TipoDeEndereco("Rua ABC")
 
 	fmt.Println(tipoEndereco)
 }

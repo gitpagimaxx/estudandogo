@@ -2,7 +2,6 @@ package enderecos
 
 import (
 	"strings"
-	"testing"
 )
 
 // TipoDeEndereco verifica se um endereço tem um tipo válido e o retorna
@@ -30,36 +29,4 @@ func TipoDeEndereco(endereco string) string {
 	}
 
 	return "Tipo Inválido"
-}
-
-func TestTipoDeEndereco(t *testing.T) {
-	t.Run("Testando um endereço do tipo Rua", func(t *testing.T) {
-		endereco := "Rua das Rosas"
-		tipoEsperado := "Rua"
-		tipoRecebido := TipoDeEndereco(endereco)
-
-		if tipoRecebido != tipoEsperado {
-			t.Errorf("O tipo recebido é diferente do esperado! Esperava %s e recebeu %s", tipoEsperado, tipoRecebido)
-		}
-	})
-
-	t.Run("Testando um endereço do tipo Avenida", func(t *testing.T) {
-		endereco := "Avenida dos Cravos"
-		tipoEsperado := "Avenida"
-		tipoRecebido := TipoDeEndereco(endereco)
-
-		if tipoRecebido != tipoEsperado {
-			t.Errorf("O tipo recebido é diferente do esperado! Esperava %s e recebeu %s", tipoEsperado, tipoRecebido)
-		}
-	})
-
-	t.Run("Testando um endereço sem tipo", func(t *testing.T) {
-		endereco := "Praça das Tulipas"
-		tipoEsperado := "Tipo Inválido"
-		tipoRecebido := TipoDeEndereco(endereco)
-
-		if tipoRecebido != tipoEsperado {
-			t.Errorf("O tipo recebido é diferente do esperado! Esperava %s e recebeu %s", tipoEsperado, tipoRecebido)
-		}
-	})
 }
