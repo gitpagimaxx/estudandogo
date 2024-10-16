@@ -1,0 +1,11 @@
+{
+    "nome": "João",
+    "idade": 25,
+    "profissao": "Desenvolvedor",
+    "tecnologias": [
+        "JavaScript",
+        "Node.js",
+        "React",
+        "React Native"
+    ]
+}
