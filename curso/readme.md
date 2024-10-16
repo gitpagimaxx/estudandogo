@@ -115,3 +115,15 @@ E comumente usado quando você precisa fazer uma alteração "global" de uma var
 ## Interface 
 
 É o mesmo modo que usamos em C# mas de um jeito diferente
+
+## Testes
+
+`go test ./... -cover` para verificar todos os testes cobertos
+
+`go test ./... -v` verbose para mmostrar o que está sendo executado
+
+`go test ./... -coverprofile resultado.txt` para gerar um relatório da cobertura
+
+`go tool cover --func=resultado.txt` vai ler o relatório e detalhar 
+
+`go tool cover --html=resultado.txt` exibe um html das linhas que não foram cobertas ficam em vermelho 

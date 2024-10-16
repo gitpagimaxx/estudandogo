@@ -1,8 +1,9 @@
 // TESTE DE UNIDADE
-package enderecos
+package enderecos_test
 
 import (
 	"testing"
+	. "introducao/enderecos"
 )
 
 type cenarioDeTeste struct {
@@ -12,6 +13,9 @@ type cenarioDeTeste struct {
 
 // TipoDeEndereco verifica se um endereço tem um tipo válido e o retorna
 func TestTipoDeEndereco(t *testing.T) {
+
+	t.Parallel()
+
 	t.Run("Testando um endereço do tipo Rua", func(t *testing.T) {
 		endereco := "Rua das Rosas"
 		tipoEsperado := "Rua"
@@ -44,6 +48,9 @@ func TestTipoDeEndereco(t *testing.T) {
 }
 
 func TestTipoEnderecoComArray(t *testing.T) {
+
+	t.Parallel()
+
 	t.Run("Testando um endereço com tipo válido", func(t *testing.T) {
 		enderecos := []string{"Rua ABC", "Avenida ABC", "Estrada ABC", "Rodovia ABC"}
 		tiposEsperados := []string{"Rua", "Avenida", "Estrada", "Rodovia"}
