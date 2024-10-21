@@ -127,3 +127,8 @@ E comumente usado quando você precisa fazer uma alteração "global" de uma var
 `go tool cover --func=resultado.txt` vai ler o relatório e detalhar 
 
 `go tool cover --html=resultado.txt` exibe um html das linhas que não foram cobertas ficam em vermelho 
+
+## MySQL
+
+go get github.com/go-sql-driver/mysql
+
