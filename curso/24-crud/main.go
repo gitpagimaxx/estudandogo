@@ -18,6 +18,8 @@ func main() {
 	r := mux.NewRouter()
 
 	r.HandleFunc("/usuarios", servidor.CriarUsuario).Methods(http.MethodPost)
+	r.HandleFunc("/usuarios", servidor.BuscarUsuarios).Methods(http.MethodGet)
+	r.HandleFunc("/usuarios/{id}", servidor.BuscarUsuario).Methods(http.MethodGet)
 
 	fmt.Println("Server is running on port 5000")
 	log.Fatal(http.ListenAndServe(":5000", r))

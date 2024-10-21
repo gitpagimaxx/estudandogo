@@ -6,14 +6,17 @@ import (
 	"fmt"
 	"io"
 	"net/http"
+	"time"
 )
 
 type usuario struct {
-	ID    int    `json:"id"`
-	Nome  string `json:"nome"`
-	Idade uint32 `json:"idade"`
+	ID           int       `json:"id"`
+	Nome         string    `json:"nome"`
+	Idade        uint32    `json:"idade"`
+	DataInsercao time.Time `json:"data_insercao"`
 }
 
+// CriarUsuario cria um novo usuário
 func CriarUsuario(w http.ResponseWriter, r *http.Request) {
 	corpo, erro := io.ReadAll(r.Body)
 
@@ -62,16 +65,17 @@ func CriarUsuario(w http.ResponseWriter, r *http.Request) {
 	w.Write([]byte(fmt.Sprintf("Usuário inserido com sucesso. ID: %d", idInserido)))
 }
 
+// BuscarUsuarios busca todos os usuários
 func BuscarUsuarios(w http.ResponseWriter, r *http.Request) {
 	db, erro := banco.Conectar()
 	if erro != nil {
-		w.Write([]byte("Erro ao conectar no banco de dados"))
+		w.Write([]byte(erro.Error()))
 		return
 	}
 
 	defer db.Close()
 
-	linhas, erro := db.Query("select * from usuarios")
+	linhas, erro := db.Query("select id AS ID, nome AS Nome, idade AS Idade, data_insercao DataInsercao from usuarios")
 	if erro != nil {
 		w.Write([]byte("Erro ao buscar usuários"))
 		return
@@ -83,8 +87,9 @@ func BuscarUsuarios(w http.ResponseWriter, r *http.Request) {
 	for linhas.Next() {
 		var usuario usuario
 
-		if erro = linhas.Scan(&usuario.ID, &usuario.Nome, &usuario.Idade); erro != nil {
+		if erro = linhas.Scan(&usuario.ID, &usuario.Nome, &usuario.Idade, &usuario.DataInsercao); erro != nil {
 			w.Write([]byte("Erro ao escanear usuário"))
+			w.Write([]byte(erro.Error()))
 			return
 		}
 
@@ -99,6 +104,7 @@ func BuscarUsuarios(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+// BuscarUsuario busca um usuário
 func BuscarUsuario(w http.ResponseWriter, r *http.Request) {
 	db, erro := banco.Conectar()
 	if erro != nil {
@@ -108,7 +114,7 @@ func BuscarUsuario(w http.ResponseWriter, r *http.Request) {
 
 	defer db.Close()
 
-	linhas, erro := db.Query("select * from usuarios where id = 1")
+	linhas, erro := db.Query("select * from usuarios where id = ?", 1)
 	if erro != nil {
 		w.Write([]byte("Erro ao buscar usuário"))
 		return
